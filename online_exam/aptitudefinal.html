@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<<html>
+<head>
+
+    <title>Aptitude Test</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+
+
+<body>
+   <div class="header">
+<a><h2> Listed below are 10 questions to test your Grammar.</h2></a>
+  <div class="header-right">
+    <a><h2>Time limit: 10 mins</h2>
+    <div id="ten-countdown"></div></a>
+  </div>
+    <p>
+    <form name="quiz">
+    <a><p>
+<P>1. If 8 men can do a piece of work in 78 days, in how many days will 13 men do the same work :<BR>
+<input type="radio" name="question0" value="24 days">24 days<BR>
+<input type="radio" name="question0" value="48 days">48 days<BR>
+<input type="radio" name="question0" value="36 days">36 days<BR>
+<input type="radio" name="question0" value="12 days">12 days<BR>  
+<p> 2. A man buys two pens for Rs. 25 each. He sells one at a gain of 10% and other at a loss of 10%. Find his overall gain or loss %.<BR>
+<input type="radio" name="question1" value="10% gain">10% gain<BR>
+<input type="radio" name="question1" value="10& loss">10% loss<BR>
+<input type="radio" name="question1" value="no gain & no loss">no gain & no loss<BR>
+<input type="radio" name="question1" value="5% gain">5% gain<BR>
+<p>3. Find the interest Mr. Ayub gets on a sum of Rs. 250000 deposited in a bank for 5 years which 9% per annumm simple rate of interest.<BR>
+<input type="radio" name="question2" value="Rs.112500">Rs.112500<BR>
+<input type="radio" name="question2" value="Rs.120000">Rs.120000<BR>
+<input type="radio" name="question2" value="Rs.120500">Rs.120500<BR>
+<input type="radio" name="question2" value="Rs.180000">Rs.180000<BR>  
+<p>4. If one pipe can fill a tank in 1.5h and another pipe can fill te same tank in 45 mins, how long will it take the two pipes to fill the tank together?<BR>
+<input type="radio" name="question3" value="20 min">20 min<BR>
+<input type="radio" name="question3" value="30 min">30 min<BR>
+<input type="radio" name="question3" value="25 min">25 min<BR>
+<input type="radio" name="question3" value="35 min">35 min<BR>
+<P>5. By selling bouquets for Rs. 63, a florist gains 5%. At what price should he sell the bouquets to gain 10% on the total cost?:<BR>
+<input type="radio" name="question4" value="Rs.66">Rs.66<BR>
+<input type="radio" name="question4" value="Rs.69">Rs.69<BR>
+<input type="radio" name="question4" value="Rs.72">Rs.72<BR>
+<input type="radio" name="question4" value="Rs.72.50">Rs.72.50<BR>  
+<P>6. When 24563 is divided by a certain divisor, quotient is 79 and remainder is 73. What is the divisor:<BR>
+<input type="radio" name="question5" value="315">315<BR>
+<input type="radio" name="question5" value="310">310<BR>
+<input type="radio" name="question5" value="325">325<BR>
+<input type="radio" name="question5" value="320">320<BR>  
+<P>7. Two coins are tossed simultaneously. What is the probability of getting at least one tail:<BR>
+<input type="radio" name="question6" value="4/3">4/3<BR>
+<input type="radio" name="question6" value="3/4">3/4<BR>
+<input type="radio" name="question6" value="5/4">5/4<BR>
+<input type="radio" name="question6" value="2/3">2/3<BR>
+<P>8. The cost price of 50 mangoes is equal to the selling price of 40 mangoes. Find the percentage profit?  :<BR>
+<input type="radio" name="question7" value="20%">20%<BR>
+<input type="radio" name="question7" value="25%">25%<BR>
+<input type="radio" name="question7" value="30%">30%<BR>
+<input type="radio" name="question7" value="None of these">None of these<BR>
+<P>9. 10,14,28,32,64,68,132 Find the number which does not fit in the pattern:<BR>
+<input type="radio" name="question8" value="32">32<BR>
+<input type="radio" name="question8" value="68">68<BR>
+<input type="radio" name="question8" value="132">132<BR>
+<input type="radio" name="question8" value="28">28<BR>
+<P>10. Anil bought an article at Rs.200 and sold it at a profit of 10%. What would have been the increase in the profit percent if it was sold for Rs.230 :<BR>
+<input type="radio" name="question9" value="5%">5%<BR>
+<input type="radio" name="question9" value="10%">10%<BR>
+<input type="radio" name="question9" value="15%">15%<BR>
+<input type="radio" name="question9" value="None of these">None of these<BR>
+
+
+<p></p>
+<input type="button"value="Grade Me"onClick="getScore(this.form);">
+<input type="reset" value="Clear"><p>
+Number of score out of 10 = <input type= text size 10 name= "mark">
+Score in percentage = <input type=text size=10 name="percentage"><br>
+
+</form>
+<p>
+
+    <form method="post" name="Form" onsubmit="" action="">
+</form>
+</a>
+</form>
+</body>
+
+
+<script type="text/javascript">
+  function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Time is up!";
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "ten-countdown", 10, 0 );
+
+    var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+    answers[0] = "48 days";
+    answers[1] = "no gain & no loss";
+    answers[2] = "Rs.112500";
+    answers[3] = "30 mins";
+    answers[4] = "Rs.66";
+    answers[5] = "310";
+    answers[6] = "3/4";
+    answers[7] = "25%";
+    answers[8] = "132";
+    answers[9] = "5%";
+    
+      function getScore(form) {
+
+   var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    answered=false; 
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        answered=true;
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+    if (answered ===false){alert("Do answer all the questions, Please") ;return false;}
+  }
+
+  var scoreper = Math.round(score/numQues*100);
+  form.percentage.value = scoreper + "%";
+  form.mark.value=score;
+
+
+}
+    </script>
+</html>

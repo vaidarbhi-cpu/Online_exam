@@ -1,0 +1,107 @@
+body{
+	background-image: url("pic.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+.page{
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+}
+.form{
+	position: static;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.8);
+	max-width: 360px;
+	margin: 20px auto 100px;
+	padding: 30px;
+	text-align: center;
+}
+.form input{
+	font-family: "roboto","sans-serif";
+	outline: 1;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.form button{
+	font-family: "roboto",sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CaF50;
+	width: 100%;
+	border: 0;
+	padding: 15PX;
+	color: #ffffff;
+	font-size: 14PX;
+	cursor: pointer;
+}
+
+.form .message{
+	margin: 15px, 0, 0;
+	color: aliceblue;
+	font-size: 15px;
+}
+.form .message a{
+	color: #4CaF50;
+	text-decoration: none;
+}
+.header {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align:center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header-right {
+  float: right;
+}
+.column {
+  float: left;
+  width: 20%;
+  padding: 20px;
+}
+.row button{
+
+	font-family: "roboto",sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CaF50;
+	width: 80%;
+	border: 0;
+	padding: 15PX;
+	color: #ffffff;
+	font-size: 14PX;
+	cursor: pointer;
+}
+button {
+	font-family: "roboto",sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CaF50;
+	width: 80%;
+	border: 0;
+	padding: 15PX;
+	color: #ffffff;
+	font-size: 14PX;
+	cursor: pointer;
+}
